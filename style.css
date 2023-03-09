@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container_galeria{
+display: grid;
+grid-template-columns:repeat(6,1fr) ;
+grid-auto-rows: 300px;
+padding: 5px;
+grid-gap: 5px;
+}
+
+
+.item_galeria{
+    position: relative;
+}
+.item_galeria .img_galeria{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item_galeria .title_galeria{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    font-size: 16pt;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.h_1{
+    grid-row: span 1;
+}
+
+.h_2{
+    grid-row: span 2;
+}
+
+.w_1{
+    grid-column: span 1;
+}
+
+.w_2{
+    grid-column: span 2;
+}
+
+@media(max-width:768px){
+    .container_galeria {
+        grid-template-columns:repeat(1,1fr) ;
+        grid-auto-rows: 50vh;
+    }
+
+    .h_2{
+        grid-row: span 1;
+    }
+    .w_2{
+        grid-column: span 1;
+    }
+    
+}
